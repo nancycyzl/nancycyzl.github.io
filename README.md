@@ -1,2 +1,2 @@
-# NancycyZL's learning journey
+# Nancycy's learning journey
 ## Keep learning! Keep smiling!
