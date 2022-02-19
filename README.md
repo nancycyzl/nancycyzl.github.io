@@ -1,2 +1,2 @@
-# Nancycy's learning journey
+# Nancycy's Blog
 ### Keep learning! Keep smiling!
