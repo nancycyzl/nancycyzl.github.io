@@ -1,2 +1,2 @@
-# nancycyzl.github.io
-Keep learning!
+# NancycyZL's learning journey
+## Keep learning! Keep smiling!
