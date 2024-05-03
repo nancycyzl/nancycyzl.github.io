@@ -1,1 +1,25 @@
-theme: jekyll-theme-modernist
+title:              Nancycy's Learning Journey
+email:              lanzhao944@gmail.com
+description:        My learning journey
+author:             Nancycyzl
+baseurl:            "/startbootstrap-clean-blog-jekyll"
+url:                "https://nancycyzl.github.io"
+
+# Social Profiles
+twitter_username:   SBootstrap
+github_username:    StartBootstrap
+facebook_username:  StartBootstrap
+instagram_username:  
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
