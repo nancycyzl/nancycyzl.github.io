@@ -4,6 +4,7 @@ title:        "Complexity (NP related)"
 author:       "Nancycy"
 header-style: text
 catalog:      true
+mathjax:      true
 tags:
     - Complexity
 ---
