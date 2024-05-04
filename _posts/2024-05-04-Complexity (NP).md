@@ -52,8 +52,9 @@ NPC问题的条件
 
 The solution cannot be verified in polynomial time. They are at least as hard as any other problem in NP.
 
-<img src="img/post2024/Pasted image 20240327223757.png" alt="drawing" width="397"/>
+![img](/img/post2024/Pasted%20image%2020240327223757.png)
 
-## Reference
+
+## References
 1. https://www.baeldung.com/cs/p-np-np-complete-np-hard
 2. https://blog.csdn.net/huang1024rui/article/details/49154507
