@@ -9,10 +9,6 @@ tags:
     - Complexity
 ---
 
-Reference:
-1. https://www.baeldung.com/cs/p-np-np-complete-np-hard
-2. https://blog.csdn.net/huang1024rui/article/details/49154507
-
 ### Big-O notation for complexity
 
 - $O(1)$ - constant time
@@ -53,3 +49,7 @@ NPC问题的条件
 The solution cannot be verified in polynomial time. They are at least as hard as any other problem in NP.
 
 ![[Pasted image 20240327223757.png|397]]
+
+## Reference
+1. https://www.baeldung.com/cs/p-np-np-complete-np-hard
+2. https://blog.csdn.net/huang1024rui/article/details/49154507
