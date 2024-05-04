@@ -21,14 +21,18 @@ tags:
 
 ## P problem
 
-P stands for "polynomial". The problem can be solved in polynomial time. Generally, the complexity can be written as 
+P stands for "polynomial". The problem can be solved in polynomial time. Generally, the complexity can be written as
+
 $$T(n)=O(C*n^k)$$
+
 where $C>0$ and $k>0$, $C$ and $k$ are constant, $n$ is input size.  Usually, $k$ is expected to be less than $n$.
 
 ## NP problem
 
 NP stands for "non-deterministic polynomial". The problem cannot be solved in polynomial time, but can be verified / certified in polynomial time. The complexity is expected to be
+
 $$T(n)=O(C_{1}*k^{C_{2*n}})$$
+
 ## NP-complete problem
 
 They all belong to NP problem, but they hold another characteristic: completeness. For any NP problem that is complete, there exists a polynomial-time algorithm that can transform it into other NP-complete problem. This transformation is called reduction.
