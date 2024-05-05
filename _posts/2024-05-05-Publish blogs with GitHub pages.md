@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        "Establish blog website using Github pages"
+title:        "Publish blogs with Github pages"
 author:       "Nancycy"
 header-style: text
 catalog:      true
