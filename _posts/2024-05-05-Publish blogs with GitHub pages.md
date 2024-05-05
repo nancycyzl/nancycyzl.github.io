@@ -6,7 +6,7 @@ header-style: text
 catalog:      true
 mathjax:      true
 tags:
-    - 
+    - setup
 ---
 
 Use template from https://huangxuan.me/
@@ -56,7 +56,7 @@ tags:
 The template does not support latex, so it uses Mathjax to enable formulars. Need to modify `_inludes/mathjax_support.html` file.
 
 Original code is:
-```json
+```html
 tex2jax: {  
   inlineMath: [ ['$','$'] ],  
   displayMath: [ ['$$','$$'] ],  
@@ -64,7 +64,7 @@ tex2jax: {
 }
 ```
 Change to
-```json
+```html
 tex2jax: {  
   inlineMath: [ ['$','$'] , ["\\(","\\)"]],  
   displayMath: [ ['$$','$$'] , ["\\[","\\]"]],  
