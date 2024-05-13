@@ -85,7 +85,9 @@ Balanced Accuracy Weighted is extended from Balanced Accuracy, where each recall
 $$ \text { BalancedAccuracyWeighted }=\frac{1}{|T|*W} \sum_{t \in T} \frac{\text{ Recall }_t}{w_{k}}$$
 
 > However, in the implementation of sklearn (Scikit-learn developers, 2020), the balanced accuracy does not count the scores for classes that did not receive predictions. So another **modified balanced** accuracy is:
+>
 > $$ \text { ModifiedBalancedAccuracy }_\gamma=\frac{1}{|X|} \sum_{t \in X} \text { Recall }_t $$
+> 
 > where $X$ denotes the set of all tags that have been predicted at least once.
 
 ## Micro averaging
