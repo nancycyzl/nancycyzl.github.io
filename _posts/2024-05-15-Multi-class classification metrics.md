@@ -116,7 +116,7 @@ $$ \text { Precision }_M=\frac{1}{|T|}\sum_{t \in T}\frac{TP_t}{TP_t+FP_t} $$
 
 **Macro-level recall**:
 
-$$ \text { Precision }_M=\frac{1}{|T|}\sum_{t \in T}\frac{TP_t}{TP_t+FN_t} $$
+$$ \text { Recall }_M=\frac{1}{|T|}\sum_{t \in T}\frac{TP_t}{TP_t+FN_t} $$
 
 **Macro-level F-measure**:
 
