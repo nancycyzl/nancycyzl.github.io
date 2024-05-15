@@ -122,6 +122,61 @@ $$ \text { Precision }_M=\frac{1}{|T|}\sum_{t \in T}\frac{TP_t}{TP_t+FN_t} $$
 
 $$ F-measure_M=2 \cdot \frac{\text { Precision }_{M} \cdot \text { Recall }_M}{\text { Precision }_M+\text { Recall }_M} $$
 
+## Scikit-Learn Implementation
+
+### Average
+
+```python
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(labels, preds)
+```
+
+### Balanced Average
+
+```python
+from sklearn.metrics import balanced_accuracy_score
+accuracy = balanced_accuracy_score(labels, preds)
+```
+
+### Balanced Average Weighted
+
+```python
+from sklearn.metrics import balanced_accuracy_score
+from sklearn.utils.class_weight import compute_sample_weight
+weights = compute_sample_weight(class_weight='balanced', y=labels)
+accuracy = balanced_accuracy_score(labels, preds)
+```
+
+### Micro-averaging precision/recall/f1
+
+Calculate metrics globally by counting the total true positives, false negatives and false positives.
+```python
+from sklearn.metrics import precision_score, recall_score, f1_score
+precision = precision_score(labels, preds, average='micro')  
+recall = recall_score(labels, preds, average='micro')  
+f1 = f1_score(labels, preds, average='micro')
+```
+
+### Macro-averaging precision/recall/f1
+
+Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
+```python
+from sklearn.metrics import precision_score, recall_score, f1_score
+precision = precision_score(labels, preds, average='macro')  
+recall = recall_score(labels, preds, average='macro')  
+f1 = f1_score(labels, preds, average='macro')
+```
+
+### Weighted-averaging precision/recall/f1
+
+Calculate metrics for each label, and find their average weighted by support (the number of true instances for each label). This alters ‘macro’ to account for label imbalance; it can result in an F-score that is not between precision and recall.
+```python
+from sklearn.metrics import precision_score, recall_score, f1_score
+precision = precision_score(labels, preds, average='weighted')  
+recall = recall_score(labels, preds, average='weighted')  
+f1 = f1_score(labels, preds, average='weighted')
+```
+
 ## Reference
 
 1. (2021) Toward building recommender systems for the circular economy: Exploring the perils of the European Waste Catalogue
