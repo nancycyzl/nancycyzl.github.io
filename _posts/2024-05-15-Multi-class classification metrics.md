@@ -170,6 +170,13 @@ f1 = f1_score(labels, preds, average='macro')
 ### Weighted-averaging precision/recall/f1
 
 Calculate metrics for each label, and find their average weighted by support (the number of true instances for each label). This alters ‘macro’ to account for label imbalance; it can result in an F-score that is not between precision and recall.
+
+$$ \text { Precision }=\frac{1}{\sum_{t \in T}s_{t}} \left( \sum_{t \in T} \text{precision}_{t} * s_{t}\right) $$
+
+$$ \text { Recall }=\frac{1}{\sum_{t \in T}s_{t}} \left( \sum_{t \in T} \text{recall}_{t} * s_{t}\right) $$
+
+$$ \text { F1 }=\frac{1}{\sum_{t \in T}s_{t}} \left( \sum_{t \in T} \text{F1}_{t} * s_{t}\right) $$
+
 ```python
 from sklearn.metrics import precision_score, recall_score, f1_score
 precision = precision_score(labels, preds, average='weighted')  
