@@ -59,7 +59,7 @@ $$ d_H\left(D_S^X, D_T^X\right)=2 \sup _{\eta \in H}\left|\operatorname{Pr}_{x \
 - **Hypothesis Class $H$:** This is a set of functions (or hypotheses) that map elements of $X$ to {0, 1}. 
 - **H-divergence $d_H$​:** This is a measure of the difference between the two distributions $D_S^X$​ and $D_T^X$​ with respect to the hypothesis class $H$. Intuitively, it measures how distinguishable the two distributions are when using the best possible classifier from $H$.
 - **Supremum $sup$⁡:** This refers to the "supreme" or the least upper bound. In this context, it is looking for the hypothesis $\eta$ within the class $H$ that maximizes the difference in the probability of predicting 1 between the source and target distributions.
-- **Absolute value $|...|$:** By looking at the absolute difference in probabilities that samples from the source and target distributions are classified as belonging to a particular class (usually the positive class, denoted by 1), the H-divergence quantifies the disagreement between the two distributions. A larger difference means a larger divergence.
+- **Absolute value $\|...\|$:** By looking at the absolute difference in probabilities that samples from the source and target distributions are classified as belonging to a particular class (usually the positive class, denoted by 1), the H-divergence quantifies the disagreement between the two distributions. A larger difference means a larger divergence.
 
 [//]: # (![[DANN.excalidraw#^frame=CDFiEOv8|800]])
 <img src="/img/post2024/DANN_divergence.png" alt="image" width="800">
@@ -93,7 +93,7 @@ where $\mathcal{A}$ is a subset of $X$.
 
 **$\mathcal{A}$-distance and $\mathcal{H}$-divergence**
 
-By choose $\mathcal{A}=\left\{A_\eta \mid \eta \in \mathcal{H}\right\}$, with $A_\eta$ the set represented by the characteristic function $\eta$, the two are identical.
+By choose $\mathcal{A}=\left\{A\_\eta \mid \eta \in \mathcal{H}\right\}$, with $A_\eta$ the set represented by the characteristic function $\eta$, the two are identical.
 
 ## Domain-adversarial Neural Networks
 
@@ -211,7 +211,7 @@ return class_pred_logits, domain_pred_logits, source_labels, target_labels
 ```
 
 [//]: # (![[Excalidraw/DANN.excalidraw.md#^frame=_Wp-m2rcqGNA7tLo6GewR|500]])
-<img src="/img/post2024/DANN_alpha.png" alt="image" width="500">
+<img src="/img/post2024/DANN_alpha.png" alt="image" width="300">
 
 **During training, combine both loss**
 ```python
