@@ -93,7 +93,7 @@ where $\mathcal{A}$ is a subset of $X$.
 
 **$\mathcal{A}$-distance and $\mathcal{H}$-divergence**
 
-By choose $\mathcal{A}=\left\{A\_\eta \mid \eta \in \mathcal{H}\right\}$, with $A_\eta$ the set represented by the characteristic function $\eta$, the two are identical.
+By choose $$\mathcal{A}=\left\{A_\eta \mid \eta \in \mathcal{H}\right\}$$, with $A_\eta$ the set represented by the characteristic function $\eta$, the two are identical.
 
 ## Domain-adversarial Neural Networks
 
@@ -211,7 +211,7 @@ return class_pred_logits, domain_pred_logits, source_labels, target_labels
 ```
 
 [//]: # (![[Excalidraw/DANN.excalidraw.md#^frame=_Wp-m2rcqGNA7tLo6GewR|500]])
-<img src="/img/post2024/DANN_alpha.png" alt="image" width="300">
+<img src="/img/post2024/DANN_alpha.png" alt="image" width="400">
 
 **During training, combine both loss**
 ```python
