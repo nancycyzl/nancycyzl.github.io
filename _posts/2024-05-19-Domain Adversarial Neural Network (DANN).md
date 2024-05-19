@@ -31,12 +31,12 @@ In practice, the only non-standard component of the proposed architecture is a r
 
 Learning a discriminative classifier or other predictor in the presence of a shift between training and test distributions is known as domain adaptation (DA). 
 
-**Unsupervised domain annotation (focus)**: target domain data are fully unlabeld.
-**Semi-supervised domain adaptation**: target domain data have few labeled samples.
+- **Unsupervised domain annotation (focus)**: target domain data are fully unlabeld.
+- **Semi-supervised domain adaptation**: target domain data have few labeled samples.
 
 ### Formulation of unsupervised domain adaption
 
-Consider a classification task where $X$ is the input space and $Y = {0, 1, ..., L-1}$ is the set of $L$ possible labels. There are two different distributions over $X \times Y$: source domain $\mathcal{D}_{\mathrm{S}}$ and target domain $\mathcal{D}_{\mathrm{T}}$.
+Consider a classification task where $X$ is the input space and $Y = {0, 1, ..., L-1}$ is the set of $L$ possible labels. There are two different distributions over $X \times Y$: source domain $\mathcal{D}\_{\mathrm{S}}$ and target domain $\mathcal{D}_{\mathrm{T}}$.
 
 $$ S=\left\{\left(\mathrm{x}_i, y_i\right)\right\}_{i=1}^n \sim\left(\mathcal{D}_{\mathrm{S}}\right)^n $$
 
@@ -59,19 +59,19 @@ $$ d_H\left(D_S^X, D_T^X\right)=2 \sup _{\eta \in H}\left|\operatorname{Pr}_{x \
 - **Hypothesis Class $H$:** This is a set of functions (or hypotheses) that map elements of $X$ to {0, 1}. 
 - **H-divergence $d_H$​:** This is a measure of the difference between the two distributions $D_S^X$​ and $D_T^X$​ with respect to the hypothesis class $H$. Intuitively, it measures how distinguishable the two distributions are when using the best possible classifier from $H$.
 - **Supremum $sup$⁡:** This refers to the "supreme" or the least upper bound. In this context, it is looking for the hypothesis $\eta$ within the class $H$ that maximizes the difference in the probability of predicting 1 between the source and target distributions.
-- **Absolute value |...|:** By looking at the absolute difference in probabilities that samples from the source and target distributions are classified as belonging to a particular class (usually the positive class, denoted by 1), the H-divergence quantifies the disagreement between the two distributions. A larger difference means a larger divergence.
+- **Absolute value $|...|$:** By looking at the absolute difference in probabilities that samples from the source and target distributions are classified as belonging to a particular class (usually the positive class, denoted by 1), the H-divergence quantifies the disagreement between the two distributions. A larger difference means a larger divergence.
 
 [//]: # (![[DANN.excalidraw#^frame=CDFiEOv8|800]])
 <img src="/img/post2024/DANN_divergence.png" alt="image" width="800">
 
 **Calculate H-divergence empirically**
-Suppose we have two samples $S \sim\left(\mathcal{D}_{\mathrm{S}}^X\right)^n$ and $S \sim\left(\mathcal{T}_{\mathrm{T}}^X\right)^n$, the empirical H-divergence can be calculated as:
+Suppose we have two samples $S \sim\left(\mathcal{D}\_{\mathrm{S}}^X\right)^n$ and $S \sim\left(\mathcal{T}_{\mathrm{T}}^X\right)^n$, the empirical H-divergence can be calculated as:
 
 $$ \hat{d}_{\mathcal{H}}(S, T)=2\left(1-\min _{\eta \in \mathcal{H}}\left[\frac{1}{n} \sum_{i=1}^n I\left[\eta\left(\mathbf{x}_i\right)=0\right]+\frac{1}{n^{\prime}} \sum_{i=n+1}^N I\left[\eta\left(\mathbf{x}_i\right)=1\right]\right]\right) $$
 
 where $I[a]$ is the indicator function which is 1 if $a$ is true, and 0 otherwise.
 
-- **minimization term** $\frac{1}{n} \sum_{i=1}^n I\left[\eta\left(\mathbf{x}_i\right)=0\right]+\frac{1}{n^{\prime}} \sum_{i=n+1}^N I\left[\eta\left(\mathbf{x}_i\right)=1\right]$: measures the misclassification rate of the hypothesis $\eta$ when it tries to discriminate between the source and target samples. The hypothesis that minimizes this rate is considered the best at differentiating between the two domains under the hypothesis class H.
+- **minimization term** : measures the misclassification rate of the hypothesis $\eta$ when it tries to discriminate between the source and target samples. The hypothesis that minimizes this rate is considered the best at differentiating between the two domains under the hypothesis class H.
 - **2(1−minimization term)**: this outer expression converts the misclassification rate into an estimate of divergence. By subtracting the minimization expression from 1, you get a measure of how well the best hypothesis $\eta$ can fail to distinguish between the two domains, and then scaling by 2 aligns this empirical measure with the theoretical range of H-divergence.
 
 ### Proxy distance
@@ -92,6 +92,7 @@ $$ d_{\mathcal{A}}\left(\mathcal{D}_{\mathrm{S}}^X, \mathcal{D}_{\mathrm{T}}^X\r
 where $\mathcal{A}$ is a subset of $X$. 
 
 **$\mathcal{A}$-distance and $\mathcal{H}$-divergence**
+
 By choose $\mathcal{A}=\left\{A_\eta \mid \eta \in \mathcal{H}\right\}$, with $A_\eta$ the set represented by the characteristic function $\eta$, the two are identical.
 
 ## Domain-adversarial Neural Networks
