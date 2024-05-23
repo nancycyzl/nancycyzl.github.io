@@ -165,6 +165,7 @@ The whole structure contains 3 parts:
 1. **`ctx`**: This is a context object that can be used to stash information for backward computation. You don't provide it directly when calling the function. It's handled by PyTorch's autograd system.
 2. **`x`**: This is the input tensor that you want to apply the operation to.
 3. **`alpha`**: This is an additional parameter that scales the gradient during the backward pass.
+
 ```python
 from torch.autograd import Function
 
