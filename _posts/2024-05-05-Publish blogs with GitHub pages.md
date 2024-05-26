@@ -15,8 +15,12 @@ Use template from https://huangxuan.me/
 
 1. download all file from template
 2. create a github repository with name [username].github.io
-3. delete unnecessary files and modify `_config.yml` and other settings
-4. open https://nancycyzl.github.io/ in web browser to check
+3. In Github website, go to `Settings`
+	- on the left panel, select `Pages`
+	- In the `Build and deployment` section, choose `Github Actions` in the `source` part
+	- save the generated file and commit to repository
+4. modify `_config.yml` and other settings, and delete unnecessary files
+5. open https://nancycyzl.github.io/ in web browser to check
 
 ## Steps to publish a post
 
