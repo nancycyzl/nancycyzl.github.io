@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        "Multi-objective potimization problem"
+title:        "Multi-objective optimization problem"
 author:       "Nancycy"
 header-style: text
 catalog:      true
@@ -20,16 +20,16 @@ Solution $x_1$ dominates $x_2$ if
 - solution $x_1$ is no worse (at least same good) than $x_2$ in all objectives
 - solution $x_1$ is strictly better than $x_2$ in at least one objective
 
-<img src="/img/post2024/MOOP_dominance.png" alt="image" width="600">
+<img src="/img/post2024/MOOP_dominance.png" alt="image" width="400">
 
 [//]: # (![[Excalidraw/Multi-objective optimization problem.excalidraw.md#^frame=H0qDxMW3mAFvSGYS9ZpQ3]])
 
-**Non-dominated solution set**
+**Non-dominated solution set** <br>
 a set of all the solutions that are not dominated by any member of the solution set
 
 ### Pareto optimal solution
 
-**Pareto optimal set**: the non-dominated set of the entire feasible decision space
+**Pareto optimal set**: the non-dominated set of the entire feasible decision space <br>
 **Pareto optimal front**: the boundary defined by the set of all points mapped from the Pareto optimal set
 
 ### Goals in Multi-objective optimization
@@ -39,7 +39,6 @@ a set of all the solutions that are not dominated by any member of the solution 
 
 <img src="/img/post2024/Pasted image 20240326235342.png" alt="image" width="400">
 
-[//]: # (![[Pasted image 20240326235342.png|400]])
 
 ## Classical methods
 
@@ -50,6 +49,7 @@ $$ \begin{array}{ll} \min / \max & f_m(\boldsymbol{x}), \quad m=1,2, \cdots, M \
 ### Weighted sum method
 
 Combine all objectives into a single objective using weighted sum. (scalarization)
+
 **Modified objective function**:
 
 $$ F(\boldsymbol{x})=\sum_{m=1}^M w_m f_m(\boldsymbol{x}) $$
@@ -63,7 +63,6 @@ $$ F(\boldsymbol{x})=\sum_{m=1}^M w_m f_m(\boldsymbol{x}) $$
 
 <img src="/img/post2024/MOOP_convex.png" alt="image" width="600">
 
-[//]: # (- ![[Excalidraw/Multi-objective optimization problem.excalidraw.md#^frame=i6itwLuEcK4PtvgEcWFiB|600]])
 
 ### $\epsilon$-constraint method
 
@@ -75,7 +74,6 @@ $$ \begin{array}{lll} \operatorname{minimize} & f_\mu(\boldsymbol{x}), \\ \text 
 
 <img src="/img/post2024/MOOP_eposilon.png" alt="image" width="700">
 
-[//]: # (![[Excalidraw/Multi-objective optimization problem.excalidraw.md#^frame=a0X-GeK0wA46sTF_-1Hly|700]])
 
 **Advantage**
 - applicable to either convex or non-convex problems
@@ -97,7 +95,7 @@ $$ \begin{array}{ll} \operatorname{minimize} & l_{\mathbf{p}}(\boldsymbol{x})=\l
 
 <img src="/img/post2024/MOOP_weighted.png" alt="image" width="800">
 
-[//]: # (![[Excalidraw/Multi-objective optimization problem.excalidraw.md#^frame=k5PeplTUOMIehePF1euVb|800]])
+
 
 **Advantage**
 - weighted Tchebycheff metric guarantees finding all Pareto-optimal solution with idea solution $z^*$
@@ -119,8 +117,6 @@ Types of MOEA based on the use of elitist
 - elitist MOEAs
 
 <img src="/img/post2024/Pasted image 20240327003643.png" alt="image" width="400">
-
-[//]: # (![[Pasted image 20240327003643.png|400]])
 
 
 ## Reference
