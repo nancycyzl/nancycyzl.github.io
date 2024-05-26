@@ -6,7 +6,7 @@ header-style: text
 catalog:      true
 mathjax:      true
 tags:
-    - Complexity
+    - complexity
 ---
 
 ### Big-O notation for complexity
