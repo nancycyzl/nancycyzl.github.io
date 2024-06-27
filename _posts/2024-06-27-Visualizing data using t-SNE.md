@@ -10,8 +10,6 @@ tags:
     - visualization
 ---
 
-[//]: # (![[Pasted image 20240625135338.png|737]])
-
 <img src="/img/post2024/Pasted image 20240625135338.png" alt="image" width="737">
 
 ## Idea
