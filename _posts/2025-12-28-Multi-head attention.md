@@ -9,6 +9,22 @@ tags:
     - LLMs
 ---
 
+## Attention formular
+
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left( \frac{Q K^\top}{\sqrt{d_k}} \right) V
+$$
+
+$$
+\mathrm{MultiHead}(Q, K, V) = \mathrm{Concat}(\mathrm{head}_1, \ldots, \mathrm{head}_h) W^O
+$$
+
+$$
+\mathrm{where} \quad \mathrm{head}_i = \mathrm{Attention}(Q W^Q_i, K W^K_i, V W^V_i)
+$$
+
+
+
 ## Pytorch implementation
 
 ```python

@@ -61,12 +61,10 @@ class GroupQueryAttention(nn.Module):
         k = self.linear_k(x).reshape(batch_size, seq_len, self.n_group, self.dk).transpose(1,2)     # (batch_size, seq_len, dk x n_group) -> (batch_size, n_group, seq_len, dk)
         v = self.linear_v(x).reshape(batch_size, seq_len, self.n_group, self.dv).transpose(1,2)     # (batch_size, seq_len, dv x n_group) -> (batch_size, n_group, seq_len, dv)
 
-        
         # expand k and v: (batch_size, n_group, seq_len, dk) -> (batch_size, n_head, seq_len, dk)
         k = k.unsqueeze(2).expand(batch_size, self.n_group, self.group_size, seq_len, self.dk).reshape(batch_size, self.n_head, seq_len, self.dk)
         v = v.unsqueeze(2).expand(batch_size, self.n_group, self.group_size, seq_len, self.dv).reshape(batch_size, self.n_head, seq_len, self.dv)
 
-        
         # attention
         scale = 1 / math.sqrt(self.dk)
         attention_scores = torch.matmul(q, k.transpose(-1, -2)) * scale    # (batch_size, n_head, seq_len, seq_len)
